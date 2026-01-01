@@ -1,0 +1,16 @@
+For runnung docker compose file 
+
+docker-compose up -d
+
+
+command for generate logs_grpc.pb.go and logs.pb.go
+
+logs git:(main) ✗ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative logs.proto
+➜  logs git:(main) ✗ 
+
+
+
+// for build and push to docker hub 
+➜  mail-service git:(main) ✗ docker build -f mail-service.dockerfile -t ayushlkp/mail-service:1.0.0 .  
+➜  mail-service git:(main) ✗ docker push ayushlkp/mail-service:1.0.0    
+same as for other service
